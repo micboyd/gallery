@@ -1,0 +1,34 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.text-bold {
+    font-weight: $weight-bold !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.margin-bottom-large {
+    margin-bottom: $size-large !important;
+}
+
+.margin-bottom-extra-large {
+    margin-bottom: $size-extra-large !important;
+}
+
+.margin-top-large {
+    margin-top: $size-large !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.no-letter-spacing {
+    letter-spacing: 0 !important;
+
+    @media screen and (min-width: $bp-large) {
+        letter-spacing: 0.1rem;
+    }
+}

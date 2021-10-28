@@ -1,0 +1,16 @@
+@import '../../styles/abstracts/variables';
+
+.card {
+    padding: $size-large;
+    border-top: 1px solid lighten($light-grey, 10);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            margin-top: $size-regular;
+        }
+    }
+}

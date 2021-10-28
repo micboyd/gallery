@@ -1,0 +1,48 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+@mixin button-hover($colour) {
+    &:hover {
+        background: lighten($colour, 10);
+        border-color: lighten($colour, 10);
+    }
+}
+
+.button {
+    outline: 0;
+    padding: $size-small;
+    border: none;
+    border-radius: $standard-border-radius;
+    color: $white;
+    margin: 0 $size-small 0 0;
+    cursor: pointer;
+    transition: .5s;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    &--transparent {
+        background: $white;
+        color: $black;
+    }
+
+    &--default {
+        background: $black;
+        color: $white;
+    }
+
+    &--blue {
+        background: $blue;
+        @include button-hover($blue);
+    }
+
+    &--green {
+        background: $green;
+        @include button-hover($green);
+    }
+
+    &--full {
+        width: 100%;
+    }
+}

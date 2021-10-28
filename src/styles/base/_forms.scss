@@ -1,0 +1,49 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.input {
+    &__field {
+        border-radius: $standard-border-radius;
+        border: 1px solid $light-grey;
+        padding: $size-extra-small;
+        width: 100%;
+        margin-bottom: $size-small;
+        padding-right: $size-regular;
+
+        &:focus {
+            outline: 0;
+            border-color: $blue;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+
+        & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        & + label:before {
+            content: "";
+            border-radius: $standard-border-radius;
+            border: 1px solid $light-grey;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        &:checked + label:after {
+            font-family: "Font Awesome 5 Pro";
+            content: "\f00c";
+            position: absolute;
+            left: 0.8rem;
+            top: 0.8rem;
+            font-size: 2rem;
+            color: $black;
+        }
+    }
+}

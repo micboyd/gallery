@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import '../abstracts/variables';
+
+h1,
+h2,
+h3,
+a,
+p,
+input,
+button,
+li {
+    font-family: $font-family;
+    margin: 0 0 $size-small 0;
+    color: $black;
+    font-weight: $weight-light;
+    text-decoration: none;
+    font-size: $text-regular;
+    line-height: 1;
+    text-align: center;
+
+    @media screen and (min-width: $bp-large) {
+        text-align: left;
+    }
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+    letter-spacing: 0.1rem;
+    font-size: $text-small;
+    text-transform: uppercase;
+}
+
+input {
+    letter-spacing: 0.1rem;
+    font-size: $text-small;
+    transition: 0.5s;
+
+    &::placeholder {
+        color: $black;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        font-size: $text-small;
+    }
+}
+
+.header {
+    letter-spacing: 0.1rem;
+
+    &--large,
+    &--medium {
+        font-weight: $weight-bold;
+    }
+
+    &--large {
+        font-size: $header-large-mob;
+
+        @media screen and (min-width: $bp-large) {
+            font-size: $header-large-desk;
+        }
+    }
+
+    &--medium {
+        font-size: $header-medium-mob;
+
+        @media screen and (min-width: $bp-large) {
+            font-size: $header-medium-desk;
+        }
+    }
+
+    &--small {
+        font-size: $header-small-desk;
+
+        @media screen and (min-width: $bp-large) {
+            font-size: $header-small-desk;
+        }
+    }
+}
+
+.text {
+    &--large {
+        font-size: $text-large-mob;
+
+        @media screen and (min-width: $bp-large) {
+            font-size: $text-large-desk;
+        }
+    }
+
+    &--medium {
+        font-size: $text-medium-mob;
+
+        @media screen and (min-width: $bp-large) {
+            font-size: $text-medium-desk;
+        }
+    }
+
+    &--small-primary,
+    &--small-secondary {
+        font-size: $text-small;
+        letter-spacing: 0.1rem;
+    }
+
+    &--small-primary {
+        text-transform: uppercase;
+        font-weight: $weight-bold;
+    }
+
+    &--error {
+        color: $red;
+    }
+}
+
+.list {
+    padding-left: $size-small;
+    margin-bottom: $size-small;
+
+    &__item  {
+        margin-bottom: $size-extra-small;
+    }
+}

@@ -1,0 +1,49 @@
+/* Colours */
+$black: #333;
+$white: #fff;
+
+$light-grey: #d2d2d2;
+
+$blue: #5998c5;
+$green: #06A77D;
+$red: darken(#d90429, 10);
+
+
+/* Fonts */
+$font-family: 'Poppins', sans-serif;
+
+$weight-light: 300;
+$weight-regular: 400;
+$weight-bold: 600;
+
+/* Sizings */
+$size-extra-small: 1.2rem;
+$size-small: 1.6rem;
+$size-regular: 2.4rem;
+$size-large: 4.8rem;
+$size-extra-large: 6.4rem;
+
+/* Font sizes */
+$text-regular: 1.6rem;
+$text-small: 1.2rem;
+
+$header-large-mob: 4rem;
+$header-medium-mob: 3.2rem;
+$header-small-mob: 2.4rem;
+$text-large-mob: 1.9rem;
+$text-medium-mob: 1.4rem;
+
+$header-large-desk: 4.25rem;
+$header-medium-desk: 3.6rem;
+$header-small-desk: 2.8rem;
+$text-large-desk: 2.4rem;
+$text-medium-desk: 1.8rem;
+
+/* Breakpoints */
+$bp-small: 576px;
+$bp-medium: 768px;
+$bp-large: 992px;
+$bp-extra-large: 1200px;
+
+$standard-border-radius: 0.5rem;
+

@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/styles.scss';
+
+import axios from 'axios';
+
+import Loading from './Gallery/Loading';
+import Gallery from './Gallery/Gallery';
+import { useState, useEffect } from 'react';
 
 function App() {
+
+  const [data, setData] = useState({
+    loadingStatus: true,
+    posts: []
+  });
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios(
+        'https://michael-boyd.herokuapp.com/posts',
+      );
+      setData({
+        posts: response.data,
+        loadingStatus: false
+      });
+    }
+
+    fetchData();
+  }, []);
+
+  function GalleryComponent() {
+    if (data.loadingStatus) {
+      return <Loading/>
+    } else {
+      return <Gallery images={data.posts} />
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GalleryComponent/>
     </div>
   );
 }
